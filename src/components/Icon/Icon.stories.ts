@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { IconTypes } from "../Icon/Icon";
-import Button from "./Button";
+import Icon, { IconTypes } from "./Icon";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta: Meta<typeof Button> = {
-    title: "Components/Button",
-    component: Button,
+const meta: Meta<typeof Icon> = {
+    title: "Components/Icon",
+    component: Icon,
     parameters: {
         layout: "centered"
     },
@@ -18,18 +17,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Basic: Story = {
+export const Plus: Story = {
     args: {
-        children: "Button"
-    }
-};
-
-export const IconButton: Story = {
-    // render: () => (
-    //     <Button>{"Icon Button"}</Button>
-    // )
-    args: {
-        children: "Icon Button",
-        icon: IconTypes.Plus
+        width: 100,
+        height: 100,
+        fill: "#000",
+        type: IconTypes.Plus
     }
 };

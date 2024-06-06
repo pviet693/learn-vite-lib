@@ -1,0 +1,2 @@
+- npm adduser
+- npm publish --access public # first time

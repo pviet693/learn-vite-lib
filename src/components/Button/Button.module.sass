@@ -1,3 +1,28 @@
 .button
-    background-color: #0000ff
-    color: #fff
+    display: inline-flex
+    align-items: stretch
+    appearance: none
+    border: none
+    background-color: var(--bw-ui-button-bgcolor, #007BFF)
+    color: var(--bw-ui-button-color, white)
+    font-size: var(--bw-ui-button-fontsize, 1rem)
+    font-weight: var(--bw-ui-button-fontweight, 700)
+    border-radius: var(--bw-ui-button-radius, 0.714rem)
+    margin: 0
+    padding: 0
+    outline: none
+    transition: background-color 0.2s
+    cursor: pointer
+    overflow: hidden
+
+    &:hover,
+    &:focus
+        background-color: var(--bw-ui-button-hover-bgcolor, #0061CA)
+
+.button__content,
+.button__icon
+    display: block
+    padding: 0.5rem 0.857rem
+
+.button__icon
+    background-color: rgba(0, 0, 0, 0.1)
